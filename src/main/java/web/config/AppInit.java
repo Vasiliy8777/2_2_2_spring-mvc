@@ -4,23 +4,23 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-@Override
-protected Class<?>[] getRootConfigClasses() {
-    return null;
-}
+    @Override
+    protected Class<?>[] getRootConfigClasses() {
+        return null;
+    }
 
-@Override
-protected Class<?>[] getServletConfigClasses() {
-    return new Class<?>[]{
-            WebConfig.class
-    };
-}
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class<?>[]{
+                WebConfig.class
+        };
+    }
 
 
-/* Данный метод указывает url, на котором будет базироваться приложение */
-@Override
-protected String[] getServletMappings() {
-    return new String[]{"/"};
-}
+    /* Данный метод указывает url, на котором будет базироваться приложение */
+    @Override
+    protected String[] getServletMappings() {
+        return new String[]{"/"};
+    }
 
 }
